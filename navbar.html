@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="navbar.css">
+    <title></title>
+</head>
+<body onload="cookieFunction()">
+
+  <div class="navbar-peter">
+  <a class="navbar-brand" href="#">
+    <img src="https://res.cloudinary.com/beartechnologies/image/upload/v1561400993/seyvillas_logo_fj1agr.png" />
+</a>
+
+<div>
+  <p id="show"></p>
+</div>
+
+  <div>
+        <img src="https://res.cloudinary.com/beartechnologies/image/upload/v1561401272/trustHeader5_uyis8d.png" />
+  </div>
+</div>
+
+<script>
+  function cookieFunction() {
+    let txt;
+    if (confirm("This website uses cookies to ensure you get the best experience on our website. Allow cookies?")) {
+      txt = "Loading Seyvillas.com";
+      window.location.href = "https://en.seyvillas.com/";
+    } else {
+      txt = "Cookies are required in order to proceed to SeyVillas.com";
+      window.onbeforeunload = function() {return}
+    }
+    document.getElementById("show").innerHTML = txt;
+};
+</script>
+</body>
+</html>

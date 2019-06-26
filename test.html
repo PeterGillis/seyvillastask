@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="cookiebar.css">
+    <title></title>
+</head>
+<body>
+
+
+
+
+<div id="cookies-bar" class="fixed">
+    <p>This website uses cookies to ensure you get the best experience on our website. <a href="/privacy-policy/#cookies" class="cb-policy">Cookies Policy</a>
+        <a href="#" id="save-cookies-example"class="cb-enable">I Understand</a>
+    </p>
+</div>
+
+<div class="main_image_box">
+  <p>Hello World!</p>
+
+  <img src="https://images.unsplash.com/photo-1532499016263-f2c3e89de9cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" alt="cookies">
+
+  <img src="https://images.unsplash.com/photo-1553349450-fc075b13898c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80" alt="cookies">
+
+</div>
+
+<script>
+    window.onload = function(){
+        try {
+            if(localStorage.getItem("cookies-enable")!="1"){
+                document.getElementById("cookies-bar").style.display="block";
+            }
+            document.getElementById("save-cookies-example").addEventListener( "click", function() {
+                localStorage.setItem("cookies-enable", "1");
+                document.getElementById("cookies-bar").style.display="none";
+            } );
+        } catch( e ) {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
